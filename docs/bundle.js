@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.scss */ \"./src/styles/style.scss\");\n\r\n\n\n//# sourceURL=webpack://bandler-templates/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.scss */ \"./src/styles/style.scss\");\n\r\n\r\n\r\n// Slider behavior \r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n    const leftArrow = document.querySelector(\".arrow-left\");\r\n    const rightArrow = document.querySelector(\".arrow-right\");\r\n\r\n    function nextSlide() {\r\n        const sliderItems = document.getElementsByClassName(\"card\");\r\n        const lastItem = sliderItems[sliderItems.length - 1];\r\n        lastItem.parentNode.prepend(lastItem);\r\n    }\r\n\r\n    function prevSlide() {\r\n        const sliderItems = document.getElementsByClassName(\"card\");\r\n        const firstItem = sliderItems[0];\r\n        firstItem.parentNode.append(firstItem);\r\n    }\r\n\r\n    leftArrow.addEventListener(\"click\", prevSlide);\r\n    rightArrow.addEventListener(\"click\", nextSlide);\r\n});\r\n\n\n//# sourceURL=webpack://bandler-templates/./src/index.js?");
 
 /***/ })
 
