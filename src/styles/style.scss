@@ -51,6 +51,24 @@ body{
 }
 
 // header
+.menu{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    cursor: pointer;
+    &__bar{
+        width: 40px;
+        height: 2px;
+        background-color: black;
+    }
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        display: flex;
+    }
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -66,6 +84,11 @@ body{
     gap: 30px;
     max-width: 480px;
     width: 100%;
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
 }
 
 .nav-list {
@@ -88,6 +111,12 @@ body{
     }
 }
 
+@media screen and (max-width: 992px) {
+    .logo{
+        margin-right: 35vw;
+    }
+}
+
 // main
 .main {
     display: flex;
@@ -103,7 +132,10 @@ body{
     width: 100%;
     text-wrap: nowrap;
     &__view{
+        display: flex;
+        flex-direction: column;
         margin-top: 155px;
+        align-items: center;
     }
 
     &__text{
@@ -115,12 +147,21 @@ body{
         @extend %header-1;
         margin-bottom: 26px;
     }
+
+    @media screen and (max-width: 992px) {
+        align-items: center;
+        justify-content: space-around;
+    }
 }
 
 .greeting-container {
     display: flex;
     margin-top: 50px;
 
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
 }
 
 .exposition {
@@ -167,6 +208,19 @@ body{
 .content-desc {
     display: flex;
     margin-bottom: 140px;
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+        margin-bottom: 95px;
+    }
+}
+
+.content-desc_second{
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        flex-direction: column-reverse;
+    }
 }
 
 .figure {
@@ -183,6 +237,14 @@ body{
     position: absolute;
     left: 27px;
     top: 87px;
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .figure__figcaption_cap {
@@ -191,7 +253,12 @@ body{
     top: 28%;
     left: -4%;
     transform-origin: left top;
-    transform: rotate(-90deg)
+    transform: rotate(-90deg);
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
 }
 
 .figure_takeoff {
@@ -200,6 +267,10 @@ body{
     min-height: 276px;
     height: 276px;
     background-color: $color--secondary-light-gray;
+    // <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        width: 100%;
+    }
 }
 
 .figure__image_takeoff {
@@ -208,6 +279,14 @@ body{
     min-height: 320px;
     left: 72px;
     top: -10%;
+    
+ // <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }   
 }
 
 .figure__figcaption_takeoff {
@@ -217,8 +296,13 @@ body{
     transform: rotate(-90deg);
     top: 30%;
     right: -20%;
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
 }
-.content-text__h2 {
+.content-text__title {
     @extend %header-2;
     margin-bottom: 25px;
 }
@@ -229,12 +313,28 @@ body{
 
 .content-text_first {
     margin-left: 103px;
+    
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        margin-left: 0;
+        margin-top: 30px;
+    }
 }
 
 .content-text_second {
     margin-right: 103px;
     .button {
         margin-top: 24px;
+    }
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        
+        margin-right: 0;
+        margin-top: 30px;
+        .button{
+            display: none;
+        }
     }
 }
 
@@ -253,11 +353,23 @@ body{
         z-index: -1;
     }
 
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        margin-top: 0;
+        &::before {
+            content: none;
+        }
+    }
 }
  
 .cards {
     display: flex;
     flex-direction: row;
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+    }
 }
 
 .card {
@@ -290,6 +402,15 @@ body{
         margin-top: 25px;
         @extend %text-common;
     }
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        margin-right: 0;
+        margin-top: 30px;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
 }
 
 .arrow {
@@ -297,7 +418,13 @@ body{
     &:hover{
         opacity: .8;
     }
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
 }
+
 .arrow-left{
     margin-right: 1.5%;
 }
@@ -312,12 +439,23 @@ body{
     flex-direction: column;
     margin-top: 130px;
     width: 100%;
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        margin-top: 95px;
+    }
 }
 
 .contacts {
     display: flex;
     align-items: center;
     margin-left: 100px;
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+        margin-left: 0px;
+    }
 }
 
 .address-info {
@@ -341,6 +479,30 @@ body{
             height: 2px;
         }
     }
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        margin-left: 0;
+        margin-top: 30px;
+        width: 100%;
+        flex-direction: row;
+        height: 10%;
+        justify-content: center;
+
+        &__title::before {
+            content: none;
+        }
+
+        &__title::after{
+            content: ':';
+        }
+        
+        &__title {
+            padding-right: 1vw;
+            margin-bottom: 10px;
+            padding-top: 2px;
+        }
+    }
 }
 
 .address {
@@ -348,15 +510,45 @@ body{
         @extend %text-common;
         margin-bottom: 16px;
     }
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &__text{
+            margin-left: 0;
+            margin-left: 7px;
+            &::after{
+                content: ',';
+            }
+            &:last-child::after{
+                content: '';
+            }
+        }
+    }
+}
+
+.map{
+    border: none;
+    max-width: 646px;
+    width: 50vw;
+    max-height: 351px;
+    height: 50vw;
 }
 
 .copy {
     margin-top: 90px;
     &__text {
         @extend %text-common;
+        font-weight: 700;
         width: 100%;
         text-align: center;
     }
+
+// <!-- Media points -->
+    @media screen and (max-width: 992px) {
+        margin-top: 10px;
+    }
 }
 
-// meadia 
