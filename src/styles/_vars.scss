@@ -1,0 +1,49 @@
+$color--primary-green: #2D635E;
+$color--primary-yellow-pink: #FAE9E0;
+$color--secondary-light-gray: #E3EBE7;
+$color--secondary-hard-green: #444A4A;
+$color--primary-white: #FFFFFF;
+$color--primary-black: #000000;
+
+%header-1 {
+    color: $color--primary-black;
+    font-family: Josefin Sans;
+    font-size: 63px;
+    font-weight: 700;
+    line-height: 63px;
+}
+
+%header-2 {
+    color: $color--primary-black;
+    font-family: 'Josefin Sans';
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+%header-3 {
+
+    color: $color--primary-black;
+    font-family: Josefin Sans;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+%text-common {
+    color: $color--secondary-hard-green;
+    font-family: Alegreya Sans;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0.1%;
+}
+
+%text-decor{
+    color: $color--secondary-hard-green;
+    font-family: Cedarville Cursive;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 53px;
+}
+

@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --mode development",
     "build-prod": "webpack --mode production",
-    "server": "webpack serve --open --mode development"
+    "server": "webpack serve --open --mode development",
+    "watch": "webpack --mode development --watch"
   },
   "author": "",
   "license": "ISC",
